@@ -6,7 +6,10 @@ class MailUser:
         other_user.receive_email(email)
 
     def receive_email(self, email):
-        self.index.append(email)
+        self.inbox.append(email)
+
+    def clear_mailbox(self):
+        self.inbox.clear()
 
 
 class Email:
@@ -15,7 +18,7 @@ class Email:
         self.body = body
 
 
-class MailAdminClient:
+class MailAdmin:
     def __init__(self):
         self.users = []
 
