@@ -2,8 +2,8 @@ class MailUser:
     def __init__(self):
         self.inbox = []
 
-    def send_email(self, email, other_user):
-        other_user.receive_email(email)
+    def send_email(self, email, receive_user):
+        receive_user.receive_email(email)
 
     def receive_email(self, email):
         self.inbox.append(email)
